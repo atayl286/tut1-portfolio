@@ -1,43 +1,77 @@
 body {
-    background-color: black;
+    animation: shift 5s infinite;
     color: white;
+}
+
+p, li {
+    font-size: 1.5em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* A class for a invisible divs to make the navigation bar jump to the correct locations. */
+.anchor {
+    display: block;
+    height: 1px;
+    position: relative;
+    top: -120px; /* Offset due to the fixed navigation bar. */
 }
 
 .center {
     margin: auto;
+    text-align: center;
     width: 50%;
 }
 
-.main-body {
-    padding-left: 10em;
-    border: 1px solid green;
-}
-
-/* Add a black background color to the top navigation */
-.topnav {
-    padding: 1%;
-    overflow: hidden;
-    left:50%;
-  }
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    color: white;
+.title {
+    font-size: 5em;
+    letter-spacing: 0.5em;
+    padding-top: 1.3em;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    text-shadow: 0px 0px 7px whitesmoke, 1px 1px 4px white;
+}
+
+/* The navigation bar. */
+.nav {
+    background: black;
+    border-bottom: 2px solid white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    overflow: hidden;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav a {
+    color: rgb(255, 73, 41);
+    display: inline-block;
     font-size: 2.5em;
+    left: 50%;
+    margin: auto;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-    text-shadow: 1px 1px 3px whitesmoke;
+.nav a:hover {
+    text-shadow: 1px 1px 4px rgb(255, 130, 41);
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-    text-underline-offset: 0.3em;
-    text-decoration: underline overline;
+/* The active navigation bar element. */
+.nav a.active {
     color: white;
+    text-decoration: underline overline;
+    text-shadow: 0px 0px 7px whitesmoke, 1px 1px 4px white;
+    text-underline-offset: 0.25em;
+}
+
+/* Subtly pulsating blue background. */
+@keyframes shift {
+    0% {background-color: rgb(0, 11, 46);}
+    50% {background-color: rgb(0, 7, 31);}
+    100% {background-color: rgb(0, 11, 46);}
 }

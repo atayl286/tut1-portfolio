@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <title>Alex Taylor's Portfolio</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title>Alex Taylor's Portfolio</title>
+    </head>
 
     <body>
-        <div class="topnav center">
-            <a class="active" href="#home">Home</a>
-            <a href="#about-me">About Me</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
+        <h1 class="title">ALEX TAYLOR</h1>
+        <div class="nav">
+            <a id="home-nav" class="active" href="#" onclick="navSelect(this)">Home</a>
+            <a id="about-nav" href="#about-me" onclick="navSelect(this)">About Me</a>
+            <a id="experience-nav" href="#experience" onclick="navSelect(this)">Experience</a>
+            <a id="contact-nav" href="#contact" onclick="navSelect(this)">Contact</a>
         </div>
 
         <div class="main-body center">
-            <p>Hello</p>
+            <img src="me fr.png" class="center" alt="Alex Taylor" style="width: 75%; padding-bottom: 1em;"/>
+            <hr>
+
+            <div id="about-me" class="anchor"></div>
+            <h1>About Me</h1>
+            <p>Hello! My name is <span style="color: rgb(255, 73, 41)">ALEX TAYLOR</span>, and I am a software engineering student at the University of Western Ontario. I spend much of my free time watching YouTube video essays and playing video games.</p>
+
+            <hr>
+            <div id="experience" class="anchor"></div>
+            <h1>Experience</h1>
+            <p>I have experience programming in:</p>
+            <ol>
+                <li>Java <img src="https://cdn-icons-png.freepik.com/512/3291/3291669.png" alt="img-java" style="width: 1em;"/></li>
+                <li>Python <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BF8l33vU2D0uFaqtdV5ullV7adyOIoRtLw&s" alt="img-java" style="width: 1em;"/></li>
+                <li>C# <img src="https://yt3.googleusercontent.com/4YAaX7CsQ-paadHsNvC6wdv2nE_7VTKpoNJOTwFhHL4rQqLC8WFe6mNxL-z-e6sfHZbHG-ucPA=s900-c-k-c0x00ffffff-no-rj" alt="img-java" style="width: 1em;"/></li>
+                <li>Web code (JavaScript, HTML, and CSS) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/WWW_logo_by_Robert_Cailliau.svg/1200px-WWW_logo_by_Robert_Cailliau.svg.png" alt="img-java" style="width: 1em;"/></li>
+            </ol>
+            <p>I have one project publicly available on the Internet, which I created with my friends for the YRHacks YRDSB Hackathon. We won <span style="color: rgb(255, 73, 41)">THIRD PLACE</span> out of over 70 teams! Link below:</p>
+            <a href="https://robots-led-by-sean.itch.io/befriend"><img src="https://img.itch.zone/aW1hZ2UvMTk3OTM2MC8xMTY0MDQ2MS5wbmc=/794x1000/t4RJ%2Bt.png" alt="Link to my game :)" style="width:50%;"></a>
+            
+            <hr>
+            <div id="contact" class="anchor"></div>
+            <h1>Contact</h1>
+            <p>Email: atayl286@uwo.ca</p>
+            <p>Phone: Private</p>
         </div>
     </body>
 </html>
